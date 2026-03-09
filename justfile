@@ -1,8 +1,15 @@
 #!/usr/bin/env just --justfile
 
 REPO_NAME := "0x73hahd-dwm"
+DEFAULT_SUDO := "doas"
 
 alias dist := package
+alias i := install
+
+install SU=DEFAULT_SUDO: make
+    cd {{justfile_directory()}}/slstatus && {{SU}} make install
+    cd {{justfile_directory()}}/source && {{SU}} make install
+
 
 make:
     cd {{justfile_directory()}}/slstatus && make -j
