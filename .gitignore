@@ -1,3 +1,6 @@
 *.o
 *.rej
-dwm 
+dwm_
+dist/
+slstatus
+dwm
