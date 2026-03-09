@@ -25,7 +25,7 @@ setup-remotes:
     git remote add codefloe ssh://git@codefloe.com/anas/{{REPO_NAME}}.git
 
 # Push the code to all remotes
-push FLAGS="-u" BRANSH="master":
+push FLAGS="-u" BRANSH="aurora":
     git push {{FLAGS}} github {{BRANSH}}
     git push {{FLAGS}} gitlab {{BRANSH}}
     git push {{FLAGS}} codeberg {{BRANSH}}
